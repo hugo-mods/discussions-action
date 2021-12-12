@@ -4,8 +4,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hugo-mods/discussions/bridge/pkg/model"
-	"github.com/hugo-mods/discussions/bridge/pkg/site"
+	"github.com/hugo-mods/discussions-bridge/pkg/model"
+	"github.com/hugo-mods/discussions-bridge/pkg/site"
 )
 
 func TestInferDiscussion(t *testing.T) {

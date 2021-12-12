@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hugo-mods/discussions/bridge/pkg/model"
+	"github.com/hugo-mods/discussions-bridge/pkg/model"
 )
 
 // Discussions maps site's blog post URL to Discussion.

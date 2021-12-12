@@ -7,10 +7,10 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/hugo-mods/discussions/bridge/pkg/config"
-	"github.com/hugo-mods/discussions/bridge/pkg/github"
-	"github.com/hugo-mods/discussions/bridge/pkg/model"
-	"github.com/hugo-mods/discussions/bridge/pkg/site"
+	"github.com/hugo-mods/discussions-bridge/pkg/config"
+	"github.com/hugo-mods/discussions-bridge/pkg/github"
+	"github.com/hugo-mods/discussions-bridge/pkg/model"
+	"github.com/hugo-mods/discussions-bridge/pkg/site"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package model
 import (
 	"strings"
 
-	"github.com/hugo-mods/discussions/bridge/pkg/github"
+	"github.com/hugo-mods/discussions-bridge/pkg/github"
 )
 
 // FromGitHubDiscussions converts the GitHub discussion to an independent Discussion model.

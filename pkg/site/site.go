@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hugo-mods/discussions/bridge/pkg/model"
+	"github.com/hugo-mods/discussions-bridge/pkg/model"
 )
 
 type Site struct {
