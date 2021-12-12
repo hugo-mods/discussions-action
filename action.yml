@@ -1,0 +1,40 @@
+name: 'GitHub Discussions Bridge'
+description: "Syncs your site's pages with discussions and vice versa."
+inputs:
+  repo-token:
+    description: 'Temporary GitHub secret token issued for this action. Required permissions: "discussions: write"'
+    required: true
+  category-name:
+    description: 'Name of the discussions category to be used. Needs to be unique across the repo.'
+    default: "Blog"
+    required: true
+  output-file:
+    description: 'Writes discussions from category-name to the given file in JSON format.'
+    default: "data/discussions.json"
+    required: false
+  site-rss-url:
+    description: 'Hugo Site URL for RSS (preferred over site-map-url).'
+    required: false
+  site-map-url:
+    description: 'Hugo Site URL for Sitemap (if RSS is available, use site-rss-url instead).'
+    required: false
+  site-url-prefix:
+    description: 'Full URL prefix to locate URLs that belong to the discussion mentioned in category-name via site-map-url/site-rss-url.'
+    required: false
+# outputs:
+#   data:
+#     description: 'Blog comment data'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    REPO_TOKEN: ${{ inputs.repo-token }}
+    CATEGORY_NAME: ${{ inputs.discussions-category }}
+    OUTPUT_FILE: ${{ inputs.output-file }}
+    SITE_URL_PREFIX: ${{ inputs.site-url-prefix }}
+    SITE_MAP_URL: ${{ inputs.site-map-url }}
+    SITE_RSS_URL: ${{ inputs.site-rss-url }}
+
+branding:
+  icon: message-square
+  color: purple
